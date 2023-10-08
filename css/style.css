@@ -300,20 +300,8 @@ h2 {
     justify-content: space-between;
 }
 
-@media (width<=660px) {
-    .card-link {
-        flex-direction: column;
-    }
-}
-
 .filler-recommend {
     font-size: 0rem;
-}
-
-@media (width<=660px) {
-    .filler-recommend {
-        flex: 1;
-    }
 }
 
 #recommend a {
