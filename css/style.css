@@ -1,0 +1,544 @@
+@import url('https://fonts.googleapis.com/css2?family=Assistant:wght@300;700&family=Open+Sans&family=Oswald&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+/*alles*/
+body {
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+    background-color: #d2d2d2;
+}
+
+/*nav*/
+nav {
+    background-color: #1b1b1b;
+    padding: 1.2vw 6vw;
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-bottom: solid 2px #ffa000;
+}
+
+@media (width<=660px) {
+    nav {
+        padding: 5vw 5vw;
+        flex-direction: column;
+        gap: 20px;
+    }
+}
+
+nav img {
+    color: #ffffff;
+}
+
+nav p {
+    color: #ffa000;
+    font-weight: 600;
+}
+
+.logo {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+}
+
+@media (width<=660px) {
+    .logo {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+.logo p {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.nav-img {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.nav-links {
+    display: flex;
+}
+
+@media (width<=660px) {
+    .nav-links {
+        flex-direction: column;
+    }
+}
+
+.nav-link {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.filler-nav {
+    font-size: 0rem;
+}
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 12px 20px;
+    border-radius: 7.5px;
+    transition: 0.5s;
+    font-size: 1rem;
+}
+
+@media (width<=660px) {
+    nav a {
+        display: flex;
+        justify-content: center;
+    }
+}
+
+nav a:hover {
+    background-color: #ffa000;
+    border-radius: 7.5px;
+    color: #000000;
+}
+
+p {
+    margin: 0;
+    color: #ffffff;
+    font-size: 1.1rem;
+}
+
+/*header*/
+header {
+    background-image: url(../images/Background-h1.jpg);
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin: 0;
+    padding: 14vw 24vw;
+    text-align: center;
+    border-bottom: solid 2px #ffa000;
+}
+
+@media (width<=660px) {
+    header {
+        padding: 40vw 5vw;
+    }
+}
+
+.header-links {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 15px;
+}
+
+header a {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 12px 20px;
+    border: 2px solid #ffa000;
+    border-radius: 6px;
+    transition: 0.5s;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+header a:hover {
+    background-color: #ffa000;
+    border: 2px solid #ffa000;
+    border-radius: 6px;
+    color: #000000;
+    font-weight: bold;
+}
+
+h1 {
+    margin: 0;
+    color: #ffffff;
+    font-size: 4rem;
+}
+
+@media (width<=660px) {
+    h1 {
+        font-size: 3rem;
+    }
+}
+
+@media (width<=305px) {
+    h1 {
+        font-size: 2.5rem;
+    }
+}
+
+/*aanbevolen*/
+#recommend {
+    padding: 6vw 10vw;
+}
+
+@media (width<=660px) {
+    #recommend {
+        padding: 20vw 5vw;
+    }
+}
+
+h2 {
+    margin: 0 0 30px 0;
+    text-align: center;
+    font-size: 2.5rem;
+    color: #000000;
+    font-weight: bold;
+}
+
+.cards {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 30px;
+}
+
+@media (width<=660px) {
+    .cards {
+        flex-direction: column;
+    }
+}
+
+.card {
+    background-color: #383838;
+    display: flex;
+    flex-direction: column;
+    border: 2px solid #000000;
+    border-radius: 6px;
+    flex: 1;
+    transition: 0.5s;
+    color: #ffffff;
+}
+
+.card:hover {
+    scale: 110%;
+}
+
+.card img {
+    border-bottom: 2px solid #000000;
+    width: 100%;
+    border-top-right-radius: 6px;
+    border-top-left-radius: 6px;
+}
+
+.card-link {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+@media (width<=660px) {
+    .card-link {
+        flex-direction: column;
+    }
+}
+
+.filler-recommend {
+    font-size: 0rem;
+}
+
+@media (width<=660px) {
+    .filler-recommend {
+        flex: 1;
+    }
+}
+
+.bottom-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 10px;
+    padding: 20px;
+    flex: 1;
+}
+
+.bottom-card-top {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: space-between;
+}
+
+.titel-card {
+    font-size: 1.4rem;
+    margin: 0;
+    text-align: start;
+    color: #ffffff;
+}
+
+.stars {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+}
+
+.gold-star {
+    color: #ffbf00;
+    font-size: 2rem;
+}
+
+.grey-star {
+    color: #727272;
+    font-size: 2rem;
+}
+
+#recommend a {
+    background-color: #727272;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    padding: 12px 20px;
+    border-radius: 6px;
+    transition: 0.5s;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+@media (width<=660px) {
+    #recommend a {
+        justify-content: center;
+    }
+}
+
+#recommend a:hover {
+    background-color: #ffa000;
+    border-radius: 6px;
+    color: #000000;
+    font-weight: bold;
+}
+
+/*form*/
+form {
+    background-color: #383838;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 6vw 25vw;
+}
+
+@media (width<=660px) {
+    form {
+        padding: 20vw 5vw;
+    }
+}
+
+form input,
+select,
+textarea {
+    padding: 10px 7.5px;
+    border-radius: 6px;
+    font-size: 0.8rem;
+}
+
+#birthday {
+    font-size: 0.65rem;
+}
+
+input:valid,
+select:valid,
+textarea:valid {
+    border: 1px solid #ffa000;
+}
+
+input:invalid,
+select:invalid,
+textarea:invalid {
+    border: 2px solid #520000;
+}
+
+.box1 {
+    border: 10px solid #ffa000;
+}
+
+h3 {
+    margin: 0 0 30px 0;
+    text-align: center;
+    color: #ffa000;
+    font-size: 2.25rem;
+}
+
+.first-and-lastname,
+.adres-and-birthday {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+@media (width<=660px) {
+
+    .first-and-lastname,
+    .adres-and-birthday {
+        flex-direction: column;
+    }
+}
+
+.firstname,
+.lastname,
+.email,
+.adres,
+.birthday,
+.subject,
+.question {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    flex: 1;
+    color: #ffffff;
+    font-size: 0.9rem;
+}
+
+.newspaper {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    color: #ffffff;
+}
+
+.newspaper-yes-no {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+}
+
+.akkoord {
+    display: flex;
+    flex-direction: row;
+    gap: 6px;
+    color: #ffffff;
+}
+
+.newspaper-and-akkoord {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.button-and-required {
+    display: flex;
+    flex-direction: column;
+}
+
+button {
+    background-color: #ffa000;
+    padding: 12px 20px;
+    border-radius: 6px;
+    transition: 0.5s;
+    color: #000000;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+button:hover {
+    background-color: #727272;
+    border-radius: 6px;
+    cursor: pointer;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+.required-tag {
+    font-size: 0.8rem;
+    color: #bcbcbc;
+}
+
+/*footer*/
+footer {
+    background-color: #1b1b1b;
+    padding: 4vw 6vw;
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+@media (width<=660px) {
+    footer {
+        padding: 20vw 5vw;
+        flex-direction: column;
+        gap: 40px;
+    }
+}
+
+.footer-left {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.copyright-and-socials {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+footer a {
+    color: #727272;
+    text-decoration: none;
+    transition: 0.25s;
+    font-size: 1rem;
+    font-size: 0.9rem;
+}
+
+footer a:hover {
+    color: #ffffff;
+}
+
+.footer-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.socials {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+}
+
+.instagram,
+.facebook,
+.snapchat {
+    opacity: 25%;
+    transition: 0.5s;
+}
+
+.instagram:hover,
+.facebook:hover,
+.snapchat:hover {
+    opacity: 100%;
+}
+
+.footer-right-text {
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+    font-size: 3rem;
+}
+
+@media (width<=660px) {
+    .footer-right-text {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+.footer-right-text a {
+    font-size: 0.8rem;
+}
+
+footer img {
+    color: #ffffff;
+}
