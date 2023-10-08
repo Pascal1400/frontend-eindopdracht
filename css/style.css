@@ -87,11 +87,10 @@ nav p {
     justify-content: center;
 }
 
-.filler-nav {
-    font-size: 0rem;
-}
-
 nav a {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     color: #ffffff;
     text-decoration: none;
     padding: 12px 20px;
@@ -298,10 +297,6 @@ h2 {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-}
-
-.filler-recommend {
-    font-size: 0rem;
 }
 
 #recommend a {
