@@ -1,14 +1,24 @@
 @import url('https://fonts.googleapis.com/css2?family=Assistant:wght@300;700&family=Open+Sans&family=Oswald&display=swap');
 
+/*alles*/
 * {
     box-sizing: border-box;
 }
 
-/*alles*/
 body {
     margin: 0;
     font-family: 'Open Sans', sans-serif;
     background-color: #d2d2d2;
+}
+
+body img {
+    max-width: 100%;
+}
+
+p {
+    margin: 0;
+    color: #ffffff;
+    font-size: 1.1rem;
 }
 
 /*nav*/
@@ -31,12 +41,10 @@ nav {
 }
 
 nav img {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
     color: #ffffff;
-}
-
-nav p {
-    color: #ffa000;
-    font-weight: 600;
 }
 
 .logo {
@@ -58,10 +66,9 @@ nav p {
     justify-content: space-around;
 }
 
-.nav-img {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
+nav p {
+    color: #ffa000;
+    font-weight: 600;
 }
 
 .nav-links {
@@ -88,8 +95,7 @@ nav a {
     color: #ffffff;
     text-decoration: none;
     padding: 12px 20px;
-    border-radius: 7.5px;
-    transition: 0.5s;
+    border-radius: 6px;
     font-size: 1rem;
 }
 
@@ -100,16 +106,18 @@ nav a {
     }
 }
 
-nav a:hover {
-    background-color: #ffa000;
-    border-radius: 7.5px;
-    color: #000000;
+@media (hover: hover) {
+    nav a:hover {
+        background-color: #ffa000;
+        border-radius: 6px;
+        color: #000000;
+    }
 }
 
-p {
-    margin: 0;
+nav a:active {
+    background-color: #727272;
     color: #ffffff;
-    font-size: 1.1rem;
+    border-radius: 6px;
 }
 
 /*header*/
@@ -118,6 +126,7 @@ header {
     background-repeat: no-repeat;
     background-position-x: center;
     background-size: cover;
+    background-color: #383838;
     display: flex;
     flex-direction: column;
     gap: 30px;
@@ -133,30 +142,8 @@ header {
     }
 }
 
-.header-links {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    gap: 15px;
-}
-
-header a {
+header img {
     color: #ffffff;
-    text-decoration: none;
-    padding: 12px 20px;
-    border: 2px solid #ffa000;
-    border-radius: 6px;
-    transition: 0.5s;
-    font-size: 1rem;
-    font-weight: bold;
-}
-
-header a:hover {
-    background-color: #ffa000;
-    border: 2px solid #ffa000;
-    border-radius: 6px;
-    color: #000000;
-    font-weight: bold;
 }
 
 h1 {
@@ -175,6 +162,41 @@ h1 {
     h1 {
         font-size: 2.5rem;
     }
+}
+
+.header-links {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 15px;
+}
+
+header a {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 12px 20px;
+    border: 2px solid #ffa000;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+@media (hover: hover) {
+    header a:hover {
+        background-color: #ffa000;
+        border: 2px solid #ffa000;
+        border-radius: 6px;
+        color: #000000;
+        font-weight: bold;
+    }
+}
+
+header a:active {
+    background-color: #727272;
+    border: 2px solid #727272;
+    border-radius: 6px;
+    color: #ffffff;
+    font-weight: bold;
 }
 
 /*aanbevolen*/
@@ -220,8 +242,10 @@ h2 {
     color: #ffffff;
 }
 
-.card:hover {
-    scale: 110%;
+@media (hover: hover) {
+    .card:hover {
+        scale: 110%;
+    }
 }
 
 .card img {
@@ -229,28 +253,6 @@ h2 {
     width: 100%;
     border-top-right-radius: 6px;
     border-top-left-radius: 6px;
-}
-
-.card-link {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-}
-
-@media (width<=660px) {
-    .card-link {
-        flex-direction: column;
-    }
-}
-
-.filler-recommend {
-    font-size: 0rem;
-}
-
-@media (width<=660px) {
-    .filler-recommend {
-        flex: 1;
-    }
 }
 
 .bottom-card {
@@ -292,15 +294,36 @@ h2 {
     font-size: 2rem;
 }
 
+.card-link {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+@media (width<=660px) {
+    .card-link {
+        flex-direction: column;
+    }
+}
+
+.filler-recommend {
+    font-size: 0rem;
+}
+
+@media (width<=660px) {
+    .filler-recommend {
+        flex: 1;
+    }
+}
+
 #recommend a {
-    background-color: #727272;
+    background-color: #ffa000;
     display: flex;
     flex-direction: row;
     gap: 20px;
     padding: 12px 20px;
     border-radius: 6px;
-    transition: 0.5s;
-    color: #ffffff;
+    color: #000000;
     text-decoration: none;
     font-size: 1rem;
     font-weight: bold;
@@ -312,11 +335,21 @@ h2 {
     }
 }
 
-#recommend a:hover {
-    background-color: #ffa000;
+@media (hover: hover) {
+    #recommend a:hover {
+        background-color: #727272;
+        border-radius: 6px;
+        color: #ffffff;
+        font-weight: bold;
+    }
+}
+
+#recommend a:active {
+    background-color: #727272;
     border-radius: 6px;
-    color: #000000;
+    color: #ffffff;
     font-weight: bold;
+    opacity: 20%;
 }
 
 /*form*/
@@ -332,34 +365,6 @@ form {
     form {
         padding: 20vw 5vw;
     }
-}
-
-form input,
-select,
-textarea {
-    padding: 10px 7.5px;
-    border-radius: 6px;
-    font-size: 0.8rem;
-}
-
-#birthday {
-    font-size: 0.65rem;
-}
-
-input:valid,
-select:valid,
-textarea:valid {
-    border: 1px solid #ffa000;
-}
-
-input:invalid,
-select:invalid,
-textarea:invalid {
-    border: 2px solid #520000;
-}
-
-.box1 {
-    border: 10px solid #ffa000;
 }
 
 h3 {
@@ -399,6 +404,10 @@ h3 {
     font-size: 0.9rem;
 }
 
+#birthday {
+    font-size: 0.65rem;
+}
+
 .newspaper {
     display: flex;
     flex-direction: column;
@@ -419,10 +428,34 @@ h3 {
     color: #ffffff;
 }
 
+.box1 {
+    border: 10px solid #ffa000;
+}
+
 .newspaper-and-akkoord {
     display: flex;
     flex-direction: column;
     gap: 30px;
+}
+
+form input,
+select,
+textarea {
+    padding: 10px 7.5px;
+    border-radius: 6px;
+    font-size: 0.8rem;
+}
+
+input:valid,
+select:valid,
+textarea:valid {
+    border: 1px solid #ffa000;
+}
+
+input:invalid,
+select:invalid,
+textarea:invalid {
+    border: 2px solid #520000;
 }
 
 .button-and-required {
@@ -434,19 +467,29 @@ button {
     background-color: #ffa000;
     padding: 12px 20px;
     border-radius: 6px;
-    transition: 0.5s;
     color: #000000;
     text-decoration: none;
     font-size: 1rem;
     font-weight: bold;
 }
 
-button:hover {
+@media (hover: hover) {
+    button:hover {
+        background-color: #727272;
+        border-radius: 6px;
+        cursor: pointer;
+        color: #ffffff;
+        font-weight: bold;
+    }
+}
+
+button:active {
     background-color: #727272;
     border-radius: 6px;
     cursor: pointer;
     color: #ffffff;
     font-weight: bold;
+    opacity: 20%;
 }
 
 .required-tag {
@@ -478,28 +521,14 @@ footer {
     gap: 20px;
 }
 
+footer img {
+    color: #ffffff;
+}
+
 .copyright-and-socials {
     display: flex;
     flex-direction: column;
     gap: 10px;
-}
-
-footer a {
-    color: #727272;
-    text-decoration: none;
-    transition: 0.25s;
-    font-size: 1rem;
-    font-size: 0.9rem;
-}
-
-footer a:hover {
-    color: #ffffff;
-}
-
-.footer-right {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
 }
 
 .socials {
@@ -512,13 +541,45 @@ footer a:hover {
 .facebook,
 .snapchat {
     opacity: 25%;
-    transition: 0.5s;
 }
 
-.instagram:hover,
-.facebook:hover,
-.snapchat:hover {
-    opacity: 100%;
+@media (hover: hover) {
+
+    .instagram:hover,
+    .facebook:hover,
+    .snapchat:hover {
+        opacity: 100%;
+    }
+}
+
+.instagram:active,
+.facebook:active,
+.snapchat:active {
+    opacity: 5%;
+}
+
+footer a {
+    color: #727272;
+    text-decoration: none;
+    font-size: 1rem;
+    font-size: 0.8rem;
+}
+
+@media (hover: hover) {
+    footer a:hover {
+        color: #ffffff;
+    }
+}
+
+Footer a:active {
+    color: #727272;
+    opacity: 35%;
+}
+
+.footer-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .footer-right-text {
@@ -533,12 +594,4 @@ footer a:hover {
         flex-direction: column;
         gap: 10px;
     }
-}
-
-.footer-right-text a {
-    font-size: 0.8rem;
-}
-
-footer img {
-    color: #ffffff;
 }
